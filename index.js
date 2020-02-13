@@ -1,15 +1,14 @@
 
-// number of rows possible values infinity
+// number of lines possible values from 1 to infinity
 let numberOfRows = 3;
 
-// cell in row possible values ounly 2,3,4
+// cell in row possible values only 2,3,4
 let cellsInRow = 3;
 
 // default highlighted, possible value is not larger number of rows
 let checkedRows = 2;
 
 calcForm(numberOfRows, cellsInRow, checkedRows);
-
 
 function calcForm(numberOfRows, cellsInRow, checkedRows) {
 
@@ -25,7 +24,7 @@ function calcForm(numberOfRows, cellsInRow, checkedRows) {
                 id="checkbox-row-${i}">
             <div class="calc__row-number  col-9">
                 <div class="row data-row" data-row-id="${i}">
-               ${renderNumbersOfRow()}
+               ${renderCellInRow()}
                </div>
             </div>
             <div class="col-3 col-calc__result">
@@ -38,28 +37,28 @@ function calcForm(numberOfRows, cellsInRow, checkedRows) {
         renderCheckbox();
     })();
 
-    function renderNumbersOfRow() {
+    function renderCellInRow() {
         let bootstrapCol = 12;
-        let calcNumbersOfRow = "";
+        let cellInRow = "";
 
         for (let i = 0; i < cellsInRow; i++) {
-            calcNumbersOfRow += `
+            cellInRow += `
         <div class="col-${bootstrapCol/cellsInRow}">
             <input type="text" class="calc__number">
         </div>
         `
         };
-        return calcNumbersOfRow
+        return cellInRow
     };
 
     function renderCheckbox() {
-        let checkboxed = "";
+        let checkbox = "";
         for (let i = 0; i < numberOfRows; i++) {
-            checkboxed += `
+            checkbox += `
             <label for="checkbox-row-${i}"></label>
         `
         };
-        groupCheckbox.innerHTML = checkboxed;
+        groupCheckbox.innerHTML = checkbox;
 
         let allCheckbox = document.querySelectorAll('.input-checkbox');
         let groupCheckboxLabel = document.querySelectorAll('.group-checkbox label');
@@ -86,21 +85,20 @@ function calcForm(numberOfRows, cellsInRow, checkedRows) {
         let calcRowNumber = document.querySelectorAll('.calc__row-number');
 
         calcNumber.forEach(function (data) {
-
             data.addEventListener('input', function (event) {
                 let activeRow = event.path[2].attributes[1].value;
-                let dataCalcRowNumber = calcRowNumber[activeRow].querySelectorAll('input');
-                let radioposition = document.querySelectorAll('input[type="radio"]');
+                let allNumbersOfActiveRow = calcRowNumber[activeRow].querySelectorAll('input');
+                let radioPosition = document.querySelectorAll('input[type="radio"]');
                 let result = ""
-                let multiplyArray =[]
-                dataCalcRowNumber.forEach(function (data, i, object) {
-                    if (radioposition[1].checked == false ) {
+                let resultArray =[]
+                allNumbersOfActiveRow.forEach(function (data, i, object) {
+                    if (radioPosition[1].checked == false ) {
                         result = Number(result) + Number(data.value);
                     }else{
                         if(data.value != 0){
-                            result = Number(data.value)
-                            multiplyArray.push(result);
-                            result = eval(multiplyArray.join('*'));
+                            result = Number(data.value);
+                            resultArray.push(result);
+                            result = eval(resultArray.join('*'));
                         }
                     }
                 });

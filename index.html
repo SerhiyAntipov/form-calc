@@ -9,6 +9,7 @@
     <meta content='yes' name='apple-mobile-web-app-capable' />
     <meta name="description" content="cafe restaurant food">
     <title>Math Form</title>
+    <link rel="shortcut icon" href="img/favicon.png" type="image/png">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="sass/index.css">
 </head>
@@ -36,20 +37,22 @@
                             <div class="calc__rows">
                                 <div class="group-checkbox">
                                     <!-- render JS  -->
+                                    
                                     <!-- <label for="checkbox-row-0"></label>
-                                    <label for="checkbox-row-1"></label>
+                                    <label for="checkbox-row-1" class="checkbox-checked"></label>
                                     <label for="checkbox-row-2"></label> -->
                                 </div>
                                 <div class="group-rows">
                                 </div>
                                 <!-- render JS  -->
+
                                 <!-- <div class="calc__rows-row row">
-                                    <input type="checkbox" name="checkbox-row-01" value="checkbox-row-01"
-                                        id="checkbox-row-01">
+                                    <input class="input-checkbox" type="checkbox" name="checkbox-row-0"
+                                        value="checkbox-row-0" id="checkbox-row-0">
                                     <div class="calc__row-number  col-9">
-                                        <div class="row">
+                                        <div class="row data-row" data-row-id="0">
                                             <div class="col-4">
-                                                <input type="text" class="calc__number" placeholder="input...">
+                                                <input type="text" class="calc__number">
                                             </div>
                                             <div class="col-4">
                                                 <input type="text" class="calc__number">
@@ -59,17 +62,17 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="col-3  calc__col-result">
-                                        <input type="text" class="calc__result">
+                                    <div class="col-3 col-calc__result">
+                                        <input type="text" class="calc__result" placeholder="Number" data-result-id="0">
                                     </div>
-                                </div> -->
-                                <!-- <div class="calc__rows-row row">
-                                    <input type="checkbox" name="checkbox-row-01" value="checkbox-row-01"
-                                        id="checkbox-row-01">
+                                </div>
+                                <div class="calc__rows-row row">
+                                    <input class="input-checkbox" type="checkbox" name="checkbox-row-1"
+                                        value="checkbox-row-1" id="checkbox-row-1" checked="checked">
                                     <div class="calc__row-number  col-9">
-                                        <div class="row">
+                                        <div class="row data-row" data-row-id="1">
                                             <div class="col-4">
-                                                <input type="text" class="calc__number" placeholder="input...">
+                                                <input type="text" class="calc__number">
                                             </div>
                                             <div class="col-4">
                                                 <input type="text" class="calc__number">
@@ -79,17 +82,17 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="col-3  calc__col-result">
-                                        <input type="text" class="calc__result">
+                                    <div class="col-3 col-calc__result">
+                                        <input type="text" class="calc__result" placeholder="Number" data-result-id="1">
                                     </div>
-                                </div> -->
-                                <!-- <div class="calc__rows-row row">
-                                    <input type="checkbox" name="checkbox-row-01" value="checkbox-row-01"
-                                        id="checkbox-row-01">
+                                </div>
+                                <div class="calc__rows-row row">
+                                    <input class="input-checkbox" type="checkbox" name="checkbox-row-2"
+                                        value="checkbox-row-2" id="checkbox-row-2">
                                     <div class="calc__row-number  col-9">
-                                        <div class="row">
+                                        <div class="row data-row" data-row-id="2">
                                             <div class="col-4">
-                                                <input type="text" class="calc__number" placeholder="input...">
+                                                <input type="text" class="calc__number">
                                             </div>
                                             <div class="col-4">
                                                 <input type="text" class="calc__number">
@@ -99,8 +102,8 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="col-3  calc__col-result">
-                                        <input type="text" class="calc__result">
+                                    <div class="col-3 col-calc__result">
+                                        <input type="text" class="calc__result" placeholder="Number" data-result-id="2">
                                     </div>
                                 </div> -->
                             </div>
