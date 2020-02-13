@@ -1,0 +1,217 @@
+body {
+    min-width: 320px;
+    color: $c-blue;
+
+    .close {
+        margin-bottom: 10px;
+        text-align: right;
+        color: $c-blue;
+        outline: none;
+
+        &:hover {
+            color: $c-blue;
+            opacity: 1 !important;
+        }
+    }
+
+    .btn {
+        width: fit-content;
+
+        &-open-modal {
+            margin-top: 50px;
+        }
+    }
+
+    .btn-info,
+    .btn-info:focus {
+        background-color: $c-transparent;
+        border: 2px solid $c-blue;
+        color: $c-blue;
+        box-shadow: none;
+
+        &:hover {
+            background-color: $c-blue;
+            border: 2px solid $c-blue;
+            color: $c-white;
+            box-shadow: none;
+        }
+    }
+
+    .modal-header {
+        border: none;
+    }
+
+    .modal-content {
+        padding: 20px 20px 20px 50px;
+        border-radius: 50px;
+
+    }
+
+    .modal-calc-header {
+        &__result {
+            text-align: center;
+            border: 2px solid $c-blue;
+
+            span {
+                line-height: 36px;
+            }
+        }
+    }
+
+    .calc {
+        p {
+            margin-top: .5rem;
+            margin-bottom: .5rem;
+        }
+
+        input {
+            max-width: 100%;
+
+            &[type="checkbox"] {
+                visibility: hidden;
+                width: unset;
+                position: absolute;
+                left: 2px;
+                top: 40%;
+
+                &:checked~.calc__row-number {
+                    background-color: $c-green;
+                }
+            }
+        }
+
+        .calc__rows-row {
+            input {
+                font-size: 0.6rem;
+                color: $c-blue;
+                padding: 0 5px;
+                font-weight: bold;
+
+                &::placeholder {
+                    color: $c-blue;
+                }
+            }
+        }
+
+        .group-checkbox {
+            display: inline-block;
+            position: absolute;
+            left: -13px;
+            top: 50%;
+            transform: translate(-100%, -50%);
+            padding: 5px;
+
+            label {
+                width: 20px;
+                height: 20px;
+                display: block;
+
+                &:last-child {
+                    margin-bottom: 0;
+                }
+            }
+        }
+
+        &__rows {
+            position: relative;
+
+            &-row {
+                position: relative;
+            }
+        }
+
+        .calc__rows-row {
+            border: 2px solid $c-blue;
+            margin-bottom: -2px;
+        }
+
+        .col-calc__result {
+            border-left: 2px solid $c-blue;
+            @media only screen and (max-width: 575px) {
+                padding-left: 2px;
+                padding-right: 2px;
+            }
+        }
+
+        .row .col-3,
+        .row .col-4,
+        .row .col-6,
+        .row .col {
+            padding-bottom: 8px;
+            padding-top: 5px;
+
+        }
+
+        .row.data-row div {
+            @media only screen and (max-width: 575px) {
+                padding-left: 2px;
+                padding-right: 2px;
+            }
+        }
+
+        .group-checkbox label,
+        .group-checkbox,
+        .col-4 input,
+        .col-6 input,
+        .col-3 input,
+        col input {
+            border: 2px solid $c-blue;
+        }
+
+
+        &__result {
+            border: 2px solid $c-transparent !important;
+        }
+    }
+
+    .modal-calc-header__result {
+        margin-bottom: -2px;
+        padding: 0;
+    }
+
+    .checkbox-checked {
+        background: url(../img/check-box_check.png) no-repeat;
+        background-position: center;
+        background-size: contain;
+    }
+}
+
+.calc__math-actions {
+    input {
+        visibility: hidden;
+        position: absolute;
+
+        &:checked+label {
+            &::before {
+                content: "";
+                width: 4px;
+                height: 4px;
+                border-radius: 50%;
+                background-color: $c-blue;
+                position: absolute;
+                left: 9px;
+                top: 50%;
+                transform: translate(0, -50%);
+            }
+        }
+    }
+
+    label {
+        position: relative;
+        padding: 2px 15px 2px 35px;
+        border: 2px solid $c-blue;
+
+        &::after {
+            content: "";
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            border: 2px solid $c-blue;
+            position: absolute;
+            left: 5px;
+            top: 50%;
+            transform: translate(0, -50%);
+        }
+    }
+
+}

@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name='viewport' content='width=device-width,initial-scale=1' />
+    <meta content='true' name='HandheldFriendly' />
+    <meta content='width' name='MobileOptimized' />
+    <meta content='yes' name='apple-mobile-web-app-capable' />
+    <meta name="description" content="cafe restaurant food">
+    <title>Math Form</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="sass/index.css">
+</head>
+
+<body>
+    <div class="container">
+        <!-- Trigger the modal with a button -->
+        <button type="button" class="btn btn-info btn-open-modal" data-toggle="modal" data-target="#calc-modal">Open
+            calc</button>
+        <!-- Modal -->
+        <div class="modal fade" id="calc-modal" role="dialog">
+            <div class="modal-dialog">
+                <!-- Modal content-->
+                <div class="modal-content">
+                    <!-- Modal Close -->
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <div class="calc__wrapper container">
+                        <!-- Modal Header -->
+                        <div class="row modal-calc-header">
+                            <h4 class="col-9 modal-calc-header__title">Simple Calc</h4>
+                            <div class="col-3 modal-calc-header__result"><span>Results</span></div>
+                        </div>
+                        <!-- Modal body -->
+                        <div class="calc">
+                            <div class="calc__rows">
+                                <div class="group-checkbox">
+                                    <!-- render JS  -->
+                                    <!-- <label for="checkbox-row-0"></label>
+                                    <label for="checkbox-row-1"></label>
+                                    <label for="checkbox-row-2"></label> -->
+                                </div>
+                                <div class="group-rows">
+                                </div>
+                                <!-- render JS  -->
+                                <!-- <div class="calc__rows-row row">
+                                    <input type="checkbox" name="checkbox-row-01" value="checkbox-row-01"
+                                        id="checkbox-row-01">
+                                    <div class="calc__row-number  col-9">
+                                        <div class="row">
+                                            <div class="col-4">
+                                                <input type="text" class="calc__number" placeholder="input...">
+                                            </div>
+                                            <div class="col-4">
+                                                <input type="text" class="calc__number">
+                                            </div>
+                                            <div class="col-4">
+                                                <input type="text" class="calc__number">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-3  calc__col-result">
+                                        <input type="text" class="calc__result">
+                                    </div>
+                                </div> -->
+                                <!-- <div class="calc__rows-row row">
+                                    <input type="checkbox" name="checkbox-row-01" value="checkbox-row-01"
+                                        id="checkbox-row-01">
+                                    <div class="calc__row-number  col-9">
+                                        <div class="row">
+                                            <div class="col-4">
+                                                <input type="text" class="calc__number" placeholder="input...">
+                                            </div>
+                                            <div class="col-4">
+                                                <input type="text" class="calc__number">
+                                            </div>
+                                            <div class="col-4">
+                                                <input type="text" class="calc__number">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-3  calc__col-result">
+                                        <input type="text" class="calc__result">
+                                    </div>
+                                </div> -->
+                                <!-- <div class="calc__rows-row row">
+                                    <input type="checkbox" name="checkbox-row-01" value="checkbox-row-01"
+                                        id="checkbox-row-01">
+                                    <div class="calc__row-number  col-9">
+                                        <div class="row">
+                                            <div class="col-4">
+                                                <input type="text" class="calc__number" placeholder="input...">
+                                            </div>
+                                            <div class="col-4">
+                                                <input type="text" class="calc__number">
+                                            </div>
+                                            <div class="col-4">
+                                                <input type="text" class="calc__number">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-3  calc__col-result">
+                                        <input type="text" class="calc__result">
+                                    </div>
+                                </div> -->
+                            </div>
+                            <div class="calc__math-actions">
+                                <p class="calc__math-actions-title">Choose box</p>
+                                <input type="radio" name="calc-radio" value="sum" class="sum" id="radio-sum" checked>
+                                <label for="radio-sum"><span>Sum</span></label>
+                                <input type="radio" name="calc-radio" value="multiply" class="multiply"
+                                    id="radio-multiply">
+                                <label for="radio-multiply"><span>Multiply</span></label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <script src="index.js"></script>
+</body>
+
+</html>
